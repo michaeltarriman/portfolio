@@ -71,7 +71,7 @@ jobs:
           chmod +x argocd
           sudo mv argocd /usr/local/bin
 
-          argocd app create $PROJECTNAME --repo https://michaeltarriman.github.io/portfolio/ --path chart/$PROJECTNAME  --revision ${VERSION:1} --helm-chart $PROJECTNAME --dest-namespace default --dest-server https://kubernetes.default.svc --helm-set-string dockerImage=tarmik0s/portfolio:${VERSION} --upsert
+          argocd app create $PROJECTNAME --repo https://michaeltarriman.github.io/portfolio/ --path chart/$PROJECTNAME  --revision ${VERSION:1} --helm-chart $PROJECTNAME --dest-namespace portfolio-master --dest-server https://kubernetes.default.svc --helm-set-string dockerImage=tarmik0s/portfolio:${VERSION} --upsert       
           argocd app sync $PROJECTNAME
           argocd app wait $PROJECTNAME
 
