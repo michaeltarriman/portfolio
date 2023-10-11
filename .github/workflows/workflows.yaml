@@ -65,7 +65,7 @@ jobs:
       - name: Deploy to ArgoCD
         id: deploy-image
         run: |
-          export ARGOCD_SERVER=${{ vars.ARGOCD_SERVER }}
+          export ARGOCD_SERVER=${{ secrets.ARGOCD_SERVER }}
           export ARGOCD_AUTH_TOKEN=${{ secrets.ARGOCD_AUTH_TOKEN }}
           wget https://github.com/argoproj/argo-cd/releases/download/v2.8.3/argocd-linux-amd64 -O argocd
           chmod +x argocd
