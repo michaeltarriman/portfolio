@@ -8,7 +8,7 @@ replicaSet: 1
 
 webappContainerService:
   type: ClusterIP  # {{ .Values.webappContainerService.type }}
-  port: 8080       # {{ .Values.webappContainerService.port }}
+  port: 2015       # {{ .Values.webappContainerService.port }}
 
 
 domainName: michaeltarriman.work                # {{ .Values.domainName }}

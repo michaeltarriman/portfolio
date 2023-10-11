@@ -1,23 +1,12 @@
 # Use an official Node.js runtime as the base image
-FROM node:14
-
-# Set the working directory in the container
+FROM node:14 AS builder
 WORKDIR /app
-
-# Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
-
-# Install project dependencies
 RUN npm install
-
-# Copy the rest of the application code to the working directory
 COPY . .
-
-# Build the Vue.js application (you can adjust the build command as needed)
 RUN npm run build
 
-# Expose the port the application will run on
-EXPOSE 8080
-
-# Start the application
-CMD ["npm", "run", "serve"]
+FROM caddy:2.4.5
+COPY --from=builder /app/dist /var/www/
+COPY --from=builder /app/Caddyfile /etc/caddy/Caddyfile
+COPY --from=builder /app/caddy/ /caddy
