@@ -1,0 +1,16 @@
+projectName: portfolio
+nameSpace: master
+appType:
+  frontend: webapp
+
+
+replicaSet: 1
+
+webappContainerService:
+  type: ClusterIP  # {{ .Values.webappContainerService.type }}
+  port: 8080       # {{ .Values.webappContainerService.port }}
+
+
+domainName: michaeltarriman.work                # {{ .Values.domainName }}
+
+dockerImage: tarmik0s/portfolio:latest
