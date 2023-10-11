@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   portfolio:
   - apiVersion: v2
+    appVersion: 0.0.4
+    created: "2023-10-11T14:25:08.973338342Z"
+    description: A Helm chart for Kubernetes
+    digest: 92397d9ca775885ed0e61a0fe064d01594feea9bba887fa0c23ac196073c5abb
+    name: portfolio
+    type: application
+    urls:
+    - https://github.com/michaeltarriman/portfolio/releases/download/portfolio-0.0.4/portfolio-0.0.4.tgz
+    version: 0.0.4
+  - apiVersion: v2
     appVersion: 0.0.3
     created: "2023-10-11T13:35:03.503305923Z"
     description: A Helm chart for Kubernetes
@@ -31,4 +41,4 @@ entries:
     urls:
     - https://github.com/michaeltarriman/portfolio/releases/download/portfolio-0.0.1/portfolio-0.0.1.tgz
     version: 0.0.1
-generated: "2023-10-11T13:35:03.503316924Z"
+generated: "2023-10-11T14:25:08.973394746Z"
