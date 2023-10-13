@@ -5,7 +5,9 @@ appType:
 
 
 replicaSet: 1
-
+minReplicas: 1
+maxReplicas: 3
+averageUtilization: 70
 webappContainerService:
   type: ClusterIP  # {{ .Values.webappContainerService.type }}
   port: 2015       # {{ .Values.webappContainerService.port }}

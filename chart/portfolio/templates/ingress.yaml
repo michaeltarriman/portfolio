@@ -39,6 +39,7 @@ apiVersion: traefik.containo.us/v1alpha1
 kind: Middleware
 metadata:
   name: {{ .Values.projectName }}-{{ .Values.nameSpace }}-{{ .Values.appType.frontend }}-ingress-redirect-scheme
+  namespace: {{ .Values.projectName }}-{{ .Values.nameSpace }}
 spec:
   redirectScheme:
     scheme: https
