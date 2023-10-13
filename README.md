@@ -9,6 +9,9 @@ This project is cloned from  https://github.com/mahy209/vuejs-portofolio and adj
 # Live Site
 https://michaeltarriman.work/
 
+# Docker image
+docker pull tarmik0s/portfolio
+
 ### Prerequisites
 
 1. Node 14
