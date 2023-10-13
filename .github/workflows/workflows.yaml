@@ -6,7 +6,7 @@ on:
 
 env:
   PROJECTNAME: portfolio
-  REGISTRY: ${{ secret.DOCKERHUB_USERNAME}}
+  REGISTRY: ${{ secrets.DOCKERHUB_USERNAME}}
   VERSION: ${{github.ref_name}}
 
 defaults:
